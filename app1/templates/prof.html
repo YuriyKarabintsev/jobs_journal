@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 style="align: center">Works log</h2>
+    {% for i in jobs %}
+        <h3>Action #{{i.id}}</h3>
+        <table>
+            <tr class="table-secondary"><th>Title of activity</th><th>Team leader</th><th>Duration</th><th>List of collaborators</th><th>Is finished</th></tr>
+            <tr class="table-primary"><td>{{i.job}}</td><td>{{i.team_leader}}</td><td>{{i.work_size}}</td><td>{{i.collaborators}}</td><td>{{i.is_finished}}</td></tr>
+        </table>
+    {% endfor %}
+{% endblock %}
