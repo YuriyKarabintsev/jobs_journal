@@ -13,11 +13,6 @@ def main():
     db_session.global_init("db/jobs.sqlite")
     app.run()
 
-    #db_sess = db_session.create_session()
-    #for job in db_sess.query(Jobs).all():
-    #    print(job.job)
-    #db_sess.add(job)
-    #db_sess.commit()
 
 @app.route("/")
 def index():
